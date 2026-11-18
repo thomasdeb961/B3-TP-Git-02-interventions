@@ -31,7 +31,13 @@
             alert('Le nom et la référence sont obligatoires.');
             return;
         }
-
+        const dejaExistant = charger().some(function (equipement) {
+            return equipement.reference.toLowerCase() === reference.toLowerCase();
+        });
+        if (dejaExistant) {
+            alert('Un équipement avec cette référence existe déjà.');
+            return;
+        }
         const equipements = charger();
         equipements.push({ nom: nom, reference: reference, type: type });
         sauvegarder(equipements);
