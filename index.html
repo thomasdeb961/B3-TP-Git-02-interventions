@@ -42,7 +42,19 @@
             <h2>Interventions enregistrees</h2>
             <ul id="liste-interventions"></ul>
         </section>
+        <section>
+            <h2>Techniciens</h2>
+            <form id="form-technicien">
+                <label for="technicien-nom">Nom</label>
+                <input id="technicien-nom" type="text" required>
+                <label for="technicien-specialite">Spécialité</label>
+                <input id="technicien-specialite" type="text">
+                <button type="submit">Ajouter le technicien</button>
+            </form>
+            <ul id="liste-techniciens"></ul>
+        </section>
     </main>
     <script src="src/app.js"></script>
+    <script src="src/techniciens.js"></script>
 </body>
 </html>
