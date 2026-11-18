@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion des interventions</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="src/equipements.js" defer></script>
 </head>
 <body>
     <header>
@@ -12,6 +13,19 @@
         <p>Suivi des interventions techniques</p>
     </header>
     <main>
+        <section>
+            <h2>Équipements</h2>
+            <form id="form-equipement">
+                <label for="equipement-nom">Nom</label>
+                <input id="equipement-nom" type="text" required>
+                <label for="equipement-reference">Référence</label>
+                <input id="equipement-reference" type="text" required>
+                <label for="equipement-type">Type</label>
+                <input id="equipement-type" type="text">
+                <button type="submit">Ajouter l'équipement</button>
+            </form>
+            <ul id="liste-equipements"></ul>
+        </section>
         <section>
             <h2>Nouvelle intervention</h2>
             <form id="form-intervention">
